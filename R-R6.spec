@@ -4,17 +4,13 @@
 #
 Name     : R-R6
 Version  : 2.1.2
-Release  : 25
+Release  : 26
 URL      : http://cran.r-project.org/src/contrib/R6_2.1.2.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/R6_2.1.2.tar.gz
 Summary  : Classes with Reference Semantics
 Group    : Development/Tools
 License  : MIT
-Requires: R-pryr
-Requires: R-microbenchmark
 BuildRequires : R-knitr
-BuildRequires : R-microbenchmark
-BuildRequires : R-pryr
 BuildRequires : clr-R-helpers
 
 %description
@@ -30,6 +26,8 @@ and therefore are kept separate from the automated tests.
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
