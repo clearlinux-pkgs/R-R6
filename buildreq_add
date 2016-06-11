@@ -1,3 +1,8 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
 R-knitr
+R-formatR
+R-pryr
+R-scales
+R-microbenchmark
+R-ggplot2

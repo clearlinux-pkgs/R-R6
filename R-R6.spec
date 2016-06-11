@@ -4,13 +4,18 @@
 #
 Name     : R-R6
 Version  : 2.1.2
-Release  : 26
+Release  : 27
 URL      : http://cran.r-project.org/src/contrib/R6_2.1.2.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/R6_2.1.2.tar.gz
 Summary  : Classes with Reference Semantics
 Group    : Development/Tools
 License  : MIT
+BuildRequires : R-formatR
+BuildRequires : R-ggplot2
 BuildRequires : R-knitr
+BuildRequires : R-microbenchmark
+BuildRequires : R-pryr
+BuildRequires : R-scales
 BuildRequires : clr-R-helpers
 
 %description
@@ -36,6 +41,7 @@ mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library R6
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
