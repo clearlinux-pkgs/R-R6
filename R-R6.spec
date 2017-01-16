@@ -4,20 +4,18 @@
 #
 Name     : R-R6
 Version  : 2.2.0
-Release  : 32
+Release  : 33
 URL      : http://cran.r-project.org/src/contrib/R6_2.2.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/R6_2.2.0.tar.gz
 Summary  : Classes with Reference Semantics
 Group    : Development/Tools
 License  : MIT
-Requires: R-stringi
 BuildRequires : R-formatR
 BuildRequires : R-ggplot2
 BuildRequires : R-knitr
 BuildRequires : R-microbenchmark
 BuildRequires : R-pryr
 BuildRequires : R-scales
-BuildRequires : R-stringi
 BuildRequires : clr-R-helpers
 
 %description
@@ -29,9 +27,11 @@ and therefore are kept separate from the automated tests.
 
 %build
 export LANG=C
+export SOURCE_DATE_EPOCH=1484546692
 
 %install
 rm -rf %{buildroot}
+export SOURCE_DATE_EPOCH=1484546692
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -41,7 +41,7 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
-R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library R6
+R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library R6
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
 export LANG=C
