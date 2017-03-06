@@ -4,7 +4,7 @@
 #
 Name     : R-R6
 Version  : 2.2.0
-Release  : 33
+Release  : 34
 URL      : http://cran.r-project.org/src/contrib/R6_2.2.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/R6_2.2.0.tar.gz
 Summary  : Classes with Reference Semantics
