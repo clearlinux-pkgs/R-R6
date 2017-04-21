@@ -4,7 +4,7 @@
 #
 Name     : R-R6
 Version  : 2.2.0
-Release  : 36
+Release  : 37
 URL      : http://cran.r-project.org/src/contrib/R6_2.2.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/R6_2.2.0.tar.gz
 Summary  : Classes with Reference Semantics
@@ -26,12 +26,15 @@ and therefore are kept separate from the automated tests.
 %setup -q -c -n R6
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1484546692
+export SOURCE_DATE_EPOCH=1492802233
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1484546692
+export SOURCE_DATE_EPOCH=1492802233
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -47,7 +50,7 @@ R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library R6
 
@@ -58,6 +61,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/R6/INDEX
 /usr/lib64/R/library/R6/LICENSE
 /usr/lib64/R/library/R6/Meta/Rd.rds
+/usr/lib64/R/library/R6/Meta/features.rds
 /usr/lib64/R/library/R6/Meta/hsearch.rds
 /usr/lib64/R/library/R6/Meta/links.rds
 /usr/lib64/R/library/R6/Meta/nsInfo.rds
