@@ -1,5 +1,5 @@
 PKG_NAME := R-R6
-URL := https://cran.r-project.org/src/contrib/R6_2.2.2.tar.gz
-
+URL = https://cran.r-project.org/src/contrib/R6_2.2.2.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common
