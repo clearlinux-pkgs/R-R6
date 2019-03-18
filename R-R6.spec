@@ -4,7 +4,7 @@
 #
 Name     : R-R6
 Version  : 2.4.0
-Release  : 66
+Release  : 67
 URL      : https://cran.r-project.org/src/contrib/R6_2.4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R6_2.4.0.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
