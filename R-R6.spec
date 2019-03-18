@@ -4,7 +4,7 @@
 #
 Name     : R-R6
 Version  : 2.4.0
-Release  : 65
+Release  : 66
 URL      : https://cran.r-project.org/src/contrib/R6_2.4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R6_2.4.0.tar.gz
 Summary  : Create Compact Hash Digests of R Objects
@@ -30,10 +30,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550355425
+export SOURCE_DATE_EPOCH=1552871418
 
 %install
-export SOURCE_DATE_EPOCH=1550355425
+export SOURCE_DATE_EPOCH=1552871418
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -69,8 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library R6|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  R6 || :
 
 
 %files
@@ -96,3 +95,16 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/R6/help/paths.rds
 /usr/lib64/R/library/R6/html/00Index.html
 /usr/lib64/R/library/R6/html/R.css
+/usr/lib64/R/library/R6/tests/manual/README
+/usr/lib64/R/library/R6/tests/manual/encapsulation.R
+/usr/lib64/R/library/R6/tests/manual/test-inheritance.R
+/usr/lib64/R/library/R6/tests/testthat.R
+/usr/lib64/R/library/R6/tests/testthat/helper.R
+/usr/lib64/R/library/R6/tests/testthat/test-clone.R
+/usr/lib64/R/library/R6/tests/testthat/test-finalizer.R
+/usr/lib64/R/library/R6/tests/testthat/test-nonportable-inheritance.R
+/usr/lib64/R/library/R6/tests/testthat/test-nonportable.R
+/usr/lib64/R/library/R6/tests/testthat/test-portable-inheritance.R
+/usr/lib64/R/library/R6/tests/testthat/test-portable.R
+/usr/lib64/R/library/R6/tests/testthat/test-s3-methods.R
+/usr/lib64/R/library/R6/tests/testthat/test-set.R
