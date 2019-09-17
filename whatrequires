@@ -1,1 +1,17 @@
 # This file contains recursive sources that require this package
+R-callr
+R-crosstalk
+R-crul
+R-dplyr
+R-httpuv
+R-httr
+R-pkgbuild
+R-processx
+R-rcmdcheck
+R-rhub
+R-scales
+R-shiny
+R-taxize
+R-testthat
+R-vcr
+R-webmockr

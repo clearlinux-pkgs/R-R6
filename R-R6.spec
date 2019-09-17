@@ -4,23 +4,20 @@
 #
 Name     : R-R6
 Version  : 2.4.0
-Release  : 72
+Release  : 73
 URL      : https://cran.r-project.org/src/contrib/R6_2.4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R6_2.4.0.tar.gz
-Summary  : Create Compact Hash Digests of R Objects
+Summary  : Encapsulated Classes with Reference Semantics
 Group    : Development/Tools
 License  : MIT
-BuildRequires : R-formatR
-BuildRequires : R-ggplot2
-BuildRequires : R-knitr
-BuildRequires : R-microbenchmark
-BuildRequires : R-pryr
-BuildRequires : R-scales
 BuildRequires : buildreq-R
 
 %description
-The tests in this directory are somewhat invasive, so they must be run by hand,
-and therefore are kept separate from the automated tests.
+reference classes. Compared to reference classes, R6 classes are simpler
+    and lighter-weight, and they are not built on S4 classes so they do not
+    require the methods package. These classes allow public and private
+    members, and they support inheritance, even when the classes are defined in
+    different packages.
 
 %prep
 %setup -q -c -n R6
@@ -29,13 +26,13 @@ and therefore are kept separate from the automated tests.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1552871418
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1568751693
 
 %install
-export SOURCE_DATE_EPOCH=1552871418
+export SOURCE_DATE_EPOCH=1568751693
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -64,12 +61,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  R6 || :
+R CMD check --no-manual --no-examples --no-codoc R6 || :
 
 
 %files
