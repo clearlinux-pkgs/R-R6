@@ -11,6 +11,7 @@ R-fauxpas
 R-httpuv
 R-httr
 R-keras
+R-languageserver
 R-pkgbuild
 R-processx
 R-progress

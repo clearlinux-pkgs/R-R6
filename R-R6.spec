@@ -4,10 +4,10 @@
 #
 Name     : R-R6
 Version  : 2.4.1
-Release  : 77
+Release  : 78
 URL      : https://cran.r-project.org/src/contrib/R6_2.4.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R6_2.4.1.tar.gz
-Summary  : Create Compact Hash Digests of R Objects
+Summary  : Encapsulated Classes with Reference Semantics
 Group    : Development/Tools
 License  : MIT
 BuildRequires : buildreq-R
@@ -21,21 +21,22 @@ reference classes. Compared to reference classes, R6 classes are simpler
 
 %prep
 %setup -q -c -n R6
+cd %{_builddir}/R6
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573663262
+export SOURCE_DATE_EPOCH=1589508276
 
 %install
-export SOURCE_DATE_EPOCH=1573663262
+export SOURCE_DATE_EPOCH=1589508276
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
