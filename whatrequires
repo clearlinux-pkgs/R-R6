@@ -2,6 +2,7 @@
 R-DBItest
 R-argparse
 R-callr
+R-conditionz
 R-crosstalk
 R-crul
 R-dbplyr
