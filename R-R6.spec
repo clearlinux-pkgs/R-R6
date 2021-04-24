@@ -4,7 +4,7 @@
 #
 Name     : R-R6
 Version  : 2.5.0
-Release  : 83
+Release  : 84
 URL      : https://cran.r-project.org/src/contrib/R6_2.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/R6_2.5.0.tar.gz
 Summary  : Encapsulated Classes with Reference Semantics
