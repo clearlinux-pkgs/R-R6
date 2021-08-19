@@ -21,6 +21,8 @@ R-rcmdcheck
 R-readr
 R-rhub
 R-roxygen2
+R-rsdmx
+R-sass
 R-scales
 R-selectr
 R-shiny
