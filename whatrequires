@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 R-DBItest
 R-argparse
+R-batchtools
 R-callr
 R-conditionz
 R-crosstalk
@@ -19,6 +20,7 @@ R-progress
 R-promises
 R-rcmdcheck
 R-readr
+R-rgl
 R-rhub
 R-roxygen2
 R-rsdmx
