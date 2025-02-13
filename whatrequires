@@ -1,19 +1,23 @@
 # This file contains recursive sources that require this package
-R-DBItest
+R-QuickJSR
 R-argparse
 R-batchtools
 R-callr
 R-conditionz
 R-crosstalk
 R-crul
+R-data.tree
 R-dbplyr
 R-desc
 R-dplyr
+R-eddington
 R-fauxpas
 R-httpuv
 R-httr
+R-httr2
 R-keras
 R-languageserver
+R-officer
 R-pkgbuild
 R-processx
 R-progress

@@ -1,5 +1,5 @@
 PKG_NAME := R-R6
-URL = https://cran.r-project.org/src/contrib/R6_2.5.1.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/R6_2.6.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
