@@ -6,10 +6,10 @@
 # autospec commit: e36a856
 #
 Name     : R-R6
-Version  : 2.6.0
-Release  : 105
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/R6_2.6.0.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/R6_2.6.0.tar.gz
+Version  : 2.6.1
+Release  : 106
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/R6_2.6.1.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/R6_2.6.1.tar.gz
 Summary  : Encapsulated Classes with Reference Semantics
 Group    : Development/Tools
 License  : MIT
@@ -39,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1739467841
+export SOURCE_DATE_EPOCH=1739817090
 
 %install
-export SOURCE_DATE_EPOCH=1739467841
+export SOURCE_DATE_EPOCH=1739817090
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -115,6 +115,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/R6/tests/testthat/test-aslist.R
 /usr/lib64/R/library/R6/tests/testthat/test-clone.R
 /usr/lib64/R/library/R6/tests/testthat/test-cloning-inheritance.R
+/usr/lib64/R/library/R6/tests/testthat/test-dollarnames.R
 /usr/lib64/R/library/R6/tests/testthat/test-finalizer.R
 /usr/lib64/R/library/R6/tests/testthat/test-is.R
 /usr/lib64/R/library/R6/tests/testthat/test-nonportable-inheritance.R
